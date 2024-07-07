@@ -1,0 +1,97 @@
+.links {
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        gap: 100px;
+        
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        // margin-top: 100px;
+        &-title {
+            text-align: center;
+            font-size: 46px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            background-color: rgba(212, 197, 161, 0.959);
+            line-height: 150%;
+            border-radius: 30px;
+            color: #ffffff;
+            
+        }
+        &-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+        }
+        &-item {
+            z-index: 0;
+            width: 300px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+
+            background-color: rgb(69, 69, 69);
+            box-shadow: inset 0 0 0px 0px rgba(0, 0, 0, 0.56);
+            border-radius:30px;
+            padding: 20px 0;
+
+            transition: all .3s;
+
+            &-img {
+                img {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: contain;
+                    border-radius: 10px;
+                    
+                }
+            }
+
+            span {
+                font-size: 24px;
+                border-top: 1px solid #fff;
+                padding-top: 20px;
+                padding-bottom: 5px;
+                width: 200px;
+                text-align: center;
+            }
+
+            
+            &:hover {
+                .links__group-item-img {
+                    position: relative;
+                    transition: all .3s;
+                    
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: 10px;
+                        background-size: 200px;
+                        max-height: 200px;
+                        background-repeat: no-repeat;
+                        z-index: -1;
+                        filter: blur(20px);
+                        opacity: .7;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
